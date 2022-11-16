@@ -1,0 +1,146 @@
+/* Start Globale Variables  */
+:root {
+    --Bright-Orange: hsl(31, 77%, 52%);
+    --Dark-Cyan: hsl(184, 100%, 22%);
+    --Very-Dark-Cyan: hsl(179, 100%, 13%);
+    --Transp-White: hsla(0, 0%, 100%, 0.75);
+    --Light-Gray: hsl(0, 0%, 95%);
+}
+
+/* End Globale Variables  */
+/* Start Globale Rules  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* End Globale Rules  */
+/* Start  */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Light-Gray);
+}
+
+.container {
+    max-width: 900px;
+}
+
+.container .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 350px;
+        max-height: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .container .cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+.container .cards .card {
+    padding: 40px;
+}
+
+.container .cards .card:nth-child(1) {
+    background-color: var(--Bright-Orange);
+}
+
+.container .cards .card:nth-child(2) {
+    background-color: var(--Dark-Cyan);
+}
+
+.container .cards .card:nth-child(3) {
+    background-color: var(--Very-Dark-Cyan);
+}
+
+.container .cards .card img {
+    margin-bottom: 30px;
+}
+
+.container .cards .card h2 {
+    text-transform: uppercase;
+    color: var(--Light-Gray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.container .cards .card p {
+    color: var(--Transp-White);
+    margin-bottom: 60px;
+    line-height: 1.6;
+}
+
+.container .cards .card button {
+    background-color: var(--Light-Gray);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    border: 2px solid var(--Light-Gray);
+}
+
+.container .cards .card:nth-child(1) button {
+    color: var(--Bright-Orange);
+}
+
+.container .cards .card:nth-child(2) button {
+    color: var(--Dark-Cyan);
+}
+
+.container .cards .card:nth-child(3) button {
+    color: var(--Very-Dark-Cyan);
+}
+
+.container .cards .card:nth-child(1) button:hover {
+    background-color: var(--Bright-Orange);
+    color: var(--Light-Gray);
+    cursor: pointer;
+}
+
+.container .cards .card:nth-child(2) button:hover {
+    background-color: var(--Dark-Cyan);
+    color: var(--Light-Gray);
+    cursor: pointer;
+}
+
+.container .cards .card:nth-child(3) button:hover {
+    background-color: var(--Very-Dark-Cyan);
+    color: var(--Light-Gray);
+    cursor: pointer;
+}
+
+/* End  */
